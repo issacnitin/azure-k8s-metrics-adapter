@@ -28,6 +28,7 @@ type AzureExternalMetricRequest struct {
 	DatabaseName              string
 	CollectionName            string
 	DocumentId                string
+	DocumentField             string
 }
 
 func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID string) (AzureExternalMetricRequest, error) {
@@ -101,10 +102,10 @@ func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID stri
 			merticReq.Subscription = value
 		case "database":
 			klog.V(4).Infof("AzureMetric database: %s", value)
-			merticReq.Database = value
+			merticReq.DatabaseName = value
 		case "collection":
 			klog.V(4).Infof("AzureMetric collection: %s", value)
-			merticReq.Collection = value
+			merticReq.CollectionName = value
 		case "documentid":
 			klog.V(4).Infof("AzureMetric documentid: %s", value)
 			merticReq.DocumentId = value

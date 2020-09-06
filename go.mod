@@ -3,13 +3,14 @@ module github.com/Azure/azure-k8s-metrics-adapter
 go 1.12
 
 require (
-	github.com/Azure/azure-sdk-for-go v46.0.0+incompatible
+	github.com/Azure/azure-sdk-for-go v30.1.0+incompatible
 	github.com/Azure/azure-service-bus-go v0.9.1
 	github.com/Azure/go-autorest v12.0.0+incompatible
 	github.com/dimchansky/utfbom v1.1.0 // indirect
 	github.com/emicklei/go-restful v2.2.1+incompatible // indirect
 	github.com/emicklei/go-restful-swagger12 v0.0.0-20170208215640-dcef7f557305 // indirect
 	github.com/evanphx/json-patch v4.2.0+incompatible // indirect
+	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8 // indirect
 	github.com/jsturtevant/gitsem v1.0.4
 	github.com/kubernetes-incubator/custom-metrics-apiserver v0.0.0-20190918110929-3d9be26a50eb
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
