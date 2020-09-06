@@ -7,4 +7,5 @@ type AzureExternalMetricClientProvider interface {
 const (
 	Monitor                string = "azuremonitor"
 	ServiceBusSubscription string = "servicebussubscription"
+	CosmosDB               string = "cosmosdb"
 )

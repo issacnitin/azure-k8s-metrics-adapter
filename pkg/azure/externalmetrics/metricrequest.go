@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"k8s.io/klog"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/selection"
+	"k8s.io/klog"
 )
 
 type AzureExternalMetricRequest struct {
@@ -25,6 +25,9 @@ type AzureExternalMetricRequest struct {
 	Namespace                 string
 	Topic                     string
 	Subscription              string
+	DatabaseName              string
+	CollectionName            string
+	DocumentId                string
 }
 
 func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID string) (AzureExternalMetricRequest, error) {
@@ -96,6 +99,18 @@ func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID stri
 		case "subscription":
 			klog.V(4).Infof("AzureMetric subscription: %s", value)
 			merticReq.Subscription = value
+		case "database":
+			klog.V(4).Infof("AzureMetric database: %s", value)
+			merticReq.Database = value
+		case "collection":
+			klog.V(4).Infof("AzureMetric collection: %s", value)
+			merticReq.Collection = value
+		case "documentid":
+			klog.V(4).Infof("AzureMetric documentid: %s", value)
+			merticReq.DocumentId = value
+		case "documentfield":
+			klog.V(4).Infof("AzureMetric documentfield: %s", value)
+			merticReq.DocumentField = value
 		default:
 			return AzureExternalMetricRequest{}, fmt.Errorf("selector label '%s' not supported", request.Key())
 		}

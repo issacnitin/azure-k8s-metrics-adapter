@@ -50,6 +50,11 @@ type AzureConfig struct {
 	ServiceBusNamespace    string `json:"serviceBusNamespace,omitempty"`
 	ServiceBusTopic        string `json:"serviceBusTopic,omitempty"`
 	ServiceBusSubscription string `json:"serviceBusSubscription,omitempty"`
+	// Cosmos DB
+	DatabaseName   string `json:"database,omitempty"`
+	CollectionName string `json:"collection,omitempty"`
+	DocumentId     string `json:"documentid,omitempty"`
+	DocumentField  string `json:"documentfield,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

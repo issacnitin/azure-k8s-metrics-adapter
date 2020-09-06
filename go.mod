@@ -3,7 +3,7 @@ module github.com/Azure/azure-k8s-metrics-adapter
 go 1.12
 
 require (
-	github.com/Azure/azure-sdk-for-go v30.1.0+incompatible
+	github.com/Azure/azure-sdk-for-go v46.0.0+incompatible
 	github.com/Azure/azure-service-bus-go v0.9.1
 	github.com/Azure/go-autorest v12.0.0+incompatible
 	github.com/dimchansky/utfbom v1.1.0 // indirect
@@ -13,6 +13,7 @@ require (
 	github.com/jsturtevant/gitsem v1.0.4
 	github.com/kubernetes-incubator/custom-metrics-apiserver v0.0.0-20190918110929-3d9be26a50eb
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	go.mongodb.org/mongo-driver v1.4.1
 	gopkg.in/blang/semver.v1 v1.1.0 // indirect
 	k8s.io/api v0.0.0-20190817021128-e14a4b1f5f84
 	k8s.io/apimachinery v0.0.0-20190817020851-f2f3a405f61d
