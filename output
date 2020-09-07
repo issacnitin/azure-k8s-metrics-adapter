@@ -1,0 +1,788 @@
+I0906 19:31:03.854072       1 controller.go:40] Setting up external metric event handlers
+I0906 19:31:03.854107       1 controller.go:52] Setting up custom metric event handlers
+I0906 19:31:03.854358       1 reflector.go:122] Starting reflector *v1alpha2.CustomMetric (30s) from github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101
+I0906 19:31:03.854375       1 reflector.go:160] Listing and watching *v1alpha2.CustomMetric from github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101
+I0906 19:31:03.854498       1 controller.go:69] initializing controller
+I0906 19:31:03.854628       1 reflector.go:122] Starting reflector *v1alpha2.ExternalMetric (30s) from github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101
+I0906 19:31:03.854654       1 reflector.go:160] Listing and watching *v1alpha2.ExternalMetric from github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101
+I0906 19:31:03.883638       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2/externalmetrics?limit=500&resourceVersion=0 200 OK in 28 milliseconds
+I0906 19:31:03.884895       1 controller.go:149] adding item to queue for 'default/cosmos' with kind 'ExternalMetric'
+I0906 19:31:03.886638       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2/externalmetrics?resourceVersion=1417851&timeout=8m1s&timeoutSeconds=481&watch=true 200 OK in 1 milliseconds
+I0906 19:31:03.892742       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2/custommetrics?limit=500&resourceVersion=0 200 OK in 38 milliseconds
+I0906 19:31:03.893691       1 round_trippers.go:438] GET https://10.0.0.1:443/api?timeout=32s 200 OK in 39 milliseconds
+I0906 19:31:03.895339       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2/custommetrics?resourceVersion=1410418&timeout=9m42s&timeoutSeconds=582&watch=true 200 OK in 1 milliseconds
+I0906 19:31:03.895975       1 round_trippers.go:438] GET https://10.0.0.1:443/apis?timeout=32s 200 OK in 1 milliseconds
+I0906 19:31:03.901204       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authorization.k8s.io/v1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.902298       1 round_trippers.go:438] GET https://10.0.0.1:443/api/v1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.902429       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v2beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.902448       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/events.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.902886       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/extensions/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.902968       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v2beta2?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.903044       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apps/v1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.903150       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/batch/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.903316       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/batch/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.903443       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiregistration.k8s.io/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.903548       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/certificates.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.903812       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiregistration.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.905825       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/scheduling.k8s.io/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.905848       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.905858       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authentication.k8s.io/v1beta1?timeout=32s 200 OK in 9 milliseconds
+I0906 19:31:03.905932       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/scheduling.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.905954       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/coordination.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.905962       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/policy/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906031       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azmon.container.insights/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906050       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/rbac.authorization.k8s.io/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906058       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/networking.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906137       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/networking.k8s.io/v1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.906156       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authentication.k8s.io/v1?timeout=32s 200 OK in 9 milliseconds
+I0906 19:31:03.906299       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/coordination.k8s.io/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906473       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v1?timeout=32s 200 OK in 9 milliseconds
+I0906 19:31:03.906753       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/node.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.906994       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/metrics.k8s.io/v1beta1?timeout=32s 200 OK in 10 milliseconds
+I0906 19:31:03.907232       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.cloudtest.azure.com/v1alpha1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.907326       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/custom.metrics.k8s.io/v1beta1?timeout=32s 503 Service Unavailable in 6 milliseconds
+I0906 19:31:03.907490       1 request.go:1150] body was not decodable (unable to check for Status): couldn't get version/kind; json parse error: json: cannot unmarshal string into Go value of type struct { APIVersion string "json:\"apiVersion,omitempty\""; Kind string "json:\"kind,omitempty\"" }
+I0906 19:31:03.907882       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/external.metrics.k8s.io/v1beta1?timeout=32s 503 Service Unavailable in 6 milliseconds
+I0906 19:31:03.908017       1 request.go:1150] body was not decodable (unable to check for Status): couldn't get version/kind; json parse error: json: cannot unmarshal string into Go value of type struct { APIVersion string "json:\"apiVersion,omitempty\""; Kind string "json:\"kind,omitempty\"" }
+I0906 19:31:03.908146       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/admissionregistration.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.908273       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/rbac.authorization.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.908815       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.908967       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiextensions.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.909343       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/storage.k8s.io/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.909091       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiextensions.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.909531       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/storage.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.909625       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/admissionregistration.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.911481       1 round_trippers.go:438] GET https://10.0.0.1:443/api?timeout=32s 200 OK in 1 milliseconds
+I0906 19:31:03.913731       1 round_trippers.go:438] GET https://10.0.0.1:443/apis?timeout=32s 200 OK in 2 milliseconds
+I0906 19:31:03.916982       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiregistration.k8s.io/v1beta1?timeout=32s 200 OK in 2 milliseconds
+I0906 19:31:03.917058       1 round_trippers.go:438] GET https://10.0.0.1:443/api/v1?timeout=32s 200 OK in 2 milliseconds
+I0906 19:31:03.917102       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiregistration.k8s.io/v1?timeout=32s 200 OK in 2 milliseconds
+I0906 19:31:03.919365       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/events.k8s.io/v1beta1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.919426       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/networking.k8s.io/v1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.919609       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apps/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.919692       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authentication.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.919434       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authentication.k8s.io/v1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.919801       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authorization.k8s.io/v1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.919864       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.919661       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/extensions/v1beta1?timeout=32s 200 OK in 5 milliseconds
+I0906 19:31:03.919682       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v1?timeout=32s 200 OK in 4 milliseconds
+I0906 19:31:03.921677       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/external.metrics.k8s.io/v1beta1?timeout=32s 503 Service Unavailable in 4 milliseconds
+I0906 19:31:03.921749       1 request.go:1150] body was not decodable (unable to check for Status): couldn't get version/kind; json parse error: json: cannot unmarshal string into Go value of type struct { APIVersion string "json:\"apiVersion,omitempty\""; Kind string "json:\"kind,omitempty\"" }
+I0906 19:31:03.921869       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/custom.metrics.k8s.io/v1beta1?timeout=32s 503 Service Unavailable in 5 milliseconds
+I0906 19:31:03.921979       1 request.go:1150] body was not decodable (unable to check for Status): couldn't get version/kind; json parse error: json: cannot unmarshal string into Go value of type struct { APIVersion string "json:\"apiVersion,omitempty\""; Kind string "json:\"kind,omitempty\"" }
+I0906 19:31:03.922030       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/storage.k8s.io/v1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922281       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v2beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922340       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/batch/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922382       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/autoscaling/v2beta2?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922417       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/admissionregistration.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922459       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/policy/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922501       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/batch/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922547       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/rbac.authorization.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922602       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/coordination.k8s.io/v1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922687       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/coordination.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922767       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/node.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.922804       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/networking.k8s.io/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922848       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/rbac.authorization.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922896       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/storage.k8s.io/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922951       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/admissionregistration.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.922991       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/scheduling.k8s.io/v1beta1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.923029       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/certificates.k8s.io/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.923084       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/scheduling.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.923127       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azmon.container.insights/v1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.923160       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.cloudtest.azure.com/v1alpha1?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.923198       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiextensions.k8s.io/v1beta1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.923239       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/apiextensions.k8s.io/v1?timeout=32s 200 OK in 7 milliseconds
+I0906 19:31:03.923317       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/azure.com/v1alpha2?timeout=32s 200 OK in 6 milliseconds
+I0906 19:31:03.951442       1 round_trippers.go:438] GET https://10.0.0.1:443/apis/metrics.k8s.io/v1beta1?timeout=32s 200 OK in 37 milliseconds
+I0906 19:31:03.952383       1 main.go:104] Looking up subscription ID via instance metadata
+I0906 19:31:03.954716       1 shared_informer.go:176] caches populated
+I0906 19:31:03.954733       1 controller.go:77] starting 2 workers with 1000000000 interval
+I0906 19:31:03.954941       1 controller.go:88] Worker starting
+I0906 19:31:03.954961       1 controller.go:98] processing item
+I0906 19:31:03.954984       1 controller.go:88] Worker starting
+I0906 19:31:03.954993       1 controller.go:98] processing item
+I0906 19:31:03.955012       1 handler.go:82] processing item 'cosmos' in namespace 'default'
+I0906 19:31:03.955040       1 handler.go:115] adding to cache item 'cosmos' in namespace 'default'
+I0906 19:31:03.955097       1 controller.go:134] succesfully proccessed item '{default/cosmos ExternalMetric}'
+I0906 19:31:03.955109       1 controller.go:91] processing next item
+I0906 19:31:03.955113       1 controller.go:98] processing item
+I0906 19:31:03.957278       1 instancemetadata.go:40] connected to sub: 7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a
+I0906 19:31:04.733436       1 serving.go:312] Generated self-signed cert (apiserver.local.config/certificates/apiserver.crt, apiserver.local.config/certificates/apiserver.key)
+I0906 19:31:05.273365       1 round_trippers.go:438] GET https://10.0.0.1:443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication 200 OK in 5 milliseconds
+I0906 19:31:05.277478       1 healthz.go:107] Installing healthz checkers:"ping","log"
+I0906 19:31:05.278035       1 secure_serving.go:116] Serving securely on [::]:6443
+I0906 19:31:05.320778       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.321087       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (635.207µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.321510       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.321555       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (364.504µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.321990       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.322026       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (353.404µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.322384       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.322416       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (333.204µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.330617       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.330675       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (582.507µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.332335       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.332377       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (317.104µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.332642       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.332674       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (280.804µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.333010       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.333044       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (284.303µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.333655       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.333685       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (315.004µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.334009       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.334040       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (300.703µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.334657       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.335555       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.481518ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.334955       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.335943       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.236915ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.334964       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.336080       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.524618ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.335220       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.336164       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.198114ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:05.763527       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.763766       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (610.508µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:05.851177       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.851395       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (572.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:05.898952       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:05.899213       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (574.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:05.987005       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:05.987151       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (416.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.074972       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.075070       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (397.105µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.163020       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.163099       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (406.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.251136       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.251248       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (559.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.339287       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.339480       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (519.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.343053       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:06.344242       1 handler.go:153] custom-metrics-adapter: GET "/openapi/v2" satisfied by nonGoRestful
+I0906 19:31:06.344265       1 pathrecorder.go:253] custom-metrics-adapter: "/openapi/v2" satisfied by NotFoundHandler
+I0906 19:31:06.344325       1 wrap.go:47] GET /openapi/v2: (5.347065ms) 404 [ 10.240.0.56:48590]
+I0906 19:31:06.427107       1 handler.go:153] custom-metrics-adapter: GET "/openapi/v2" satisfied by nonGoRestful
+I0906 19:31:06.427129       1 pathrecorder.go:253] custom-metrics-adapter: "/openapi/v2" satisfied by NotFoundHandler
+I0906 19:31:06.427390       1 wrap.go:47] GET /openapi/v2: (626.908µs) 404 [ 10.240.0.56:48590]
+I0906 19:31:06.607441       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.607551       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (452.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.655173       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.655281       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (617.808µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.693847       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.695233       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.982824ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.694112       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.695497       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (2.054426ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.694510       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.695821       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.64962ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.695434       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.696028       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.507018ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.696439       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.696495       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (987.212µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.696780       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.696918       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (547.707µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.697090       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.697149       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (467.406µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.697894       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.697987       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (439.305µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.697913       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.698246       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (573.707µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.698485       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.698595       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (572.907µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:06.704843       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.704920       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (399.905µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.805596       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.805845       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (5.019361ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.901964       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.902216       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (591.908µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.919743       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:06.919823       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (427.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.972420       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.972625       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (535.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:06.974451       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:06.974522       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (340.704µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.023112       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.023362       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (556.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.027314       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.027423       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (3.885247ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.111625       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.111883       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.112552       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.773522ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.111956       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.157314ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.199094       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.199219       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (503.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.292632       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.292745       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (446.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.347298       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.347483       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (538.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.392494       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.393024       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (989.912µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.431946       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.432098       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (530.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.479405       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.479623       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (504.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.567426       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.567515       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (483.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.655620       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.655811       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (720.809µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.655632       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.655942       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (713.508µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.693139       1 handler.go:153] custom-metrics-adapter: GET "/openapi/v2" satisfied by nonGoRestful
+I0906 19:31:07.693157       1 pathrecorder.go:253] custom-metrics-adapter: "/openapi/v2" satisfied by NotFoundHandler
+I0906 19:31:07.693219       1 wrap.go:47] GET /openapi/v2: (396.405µs) 404 [ 10.240.0.56:48590]
+I0906 19:31:07.739058       1 handler.go:153] custom-metrics-adapter: GET "/openapi/v2" satisfied by nonGoRestful
+I0906 19:31:07.739117       1 pathrecorder.go:253] custom-metrics-adapter: "/openapi/v2" satisfied by NotFoundHandler
+I0906 19:31:07.739190       1 wrap.go:47] GET /openapi/v2: (548.407µs) 404 [ 10.240.0.56:48590]
+I0906 19:31:07.739264       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.739391       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (546.807µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.739787       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.739939       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (521.306µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.827338       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.827535       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (562.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.827533       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.827776       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (731.009µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.915204       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.915691       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (797.01µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:07.915275       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.915880       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (922.311µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:07.915634       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:07.916190       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (827.31µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:07.916144       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:07.916383       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.094914ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.005583       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.005790       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.233115ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.006132       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.006328       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (984.112µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.091100       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.091212       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (475.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.179316       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.179445       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (520.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.235965       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.236123       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (479.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.316347       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.316580       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (575.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.403309       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.403382       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (391.304µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:08.403541       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.403747       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (796.41µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.403918       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.404035       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (477.305µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:08.492362       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.492500       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (782.41µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.579463       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.579540       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (656.408µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.667265       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.667370       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (491.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.755196       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.755277       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (401.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.803587       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.803717       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (513.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.891277       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.891414       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (576.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:08.930185       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:08.930330       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (500.306µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:08.930185       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:08.930525       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (689.209µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:13.107251       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:13.107408       1 provider_external.go:24] Received request for namespace: default, metric name: cosmos, metric selectors: 
+I0906 19:31:13.107482       1 cosmosdb_client.go:46] {Messages 7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a cosmosdb azload2   Total8 2020-09-06T19:26:13Z/2020-09-06T19:31:13Z EntityName eq 'externalq' nijoyaciaksorc    azureload metrics 5f550a4d5a7bb01b4c0e285b available}
+I0906 19:31:13.506576       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:13.506659       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (554.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.556600       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:13.556782       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (622.408µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.642913       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:13.643031       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (416.105µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.730971       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:13.731169       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (566.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.779025       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:13.779216       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (618.208µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.827046       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:13.827210       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (529.406µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.914977       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:13.915158       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (482.306µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:13.967124       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:13.967192       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (407.505µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.229441       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.229525       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (473.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.278887       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.279115       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (551.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.279031       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.279347       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (549.907µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.310944       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:14.311041       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.311078       1 provider_external.go:24] Received request for namespace: default, metric name: cosmos, metric selectors: 
+I0906 19:31:14.311191       1 cosmosdb_client.go:46] {Messages 7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a cosmosdb azload2   Total8 2020-09-06T19:26:14Z/2020-09-06T19:31:14Z EntityName eq 'externalq' nijoyaciaksorc    azureload metrics 5f550a4d5a7bb01b4c0e285b available}
+I0906 19:31:14.351208       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.351285       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (452.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.351728       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.351783       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (366.204µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.438974       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.439055       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (364.104µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.438974       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.439192       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (483.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+E0906 19:31:14.452178       1 provider_external.go:43] bad request: not found
+I0906 19:31:14.452254       1 trace.go:81] Trace[508572546]: "List /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" (started: 2020-09-06 19:31:13.107293833 +0000 UTC m=+9.280860174) (total time: 1.34492437s):
+Trace[508572546]: [90.901µs] [90.901µs] About to List from storage
+Trace[508572546]: [1.34492437s] [1.344833469s] END
+I0906 19:31:14.452442       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos: (1.345569378s) 400 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:14.531253       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.531343       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (413.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.531925       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.531980       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.083013ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.619381       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.619453       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (457.105µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.619458       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.619546       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (533.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.707157       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.707332       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.707436       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (622.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.707584       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (806.01µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.795048       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.795230       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (439.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.795053       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:14.795603       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (856.41µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:14.882753       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:14.882984       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (547.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.148541       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.148634       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (455.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.195112       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.195284       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (546.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.252149       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.252270       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (571.207µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.339084       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.339191       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (396.905µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.427187       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.427337       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (520.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+E0906 19:31:15.464417       1 provider_external.go:43] bad request: not found
+I0906 19:31:15.464599       1 trace.go:81] Trace[192921532]: "List /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" (started: 2020-09-06 19:31:14.311062975 +0000 UTC m=+10.484629316) (total time: 1.153486425s):
+Trace[192921532]: [9.4µs] [9.4µs] About to List from storage
+Trace[192921532]: [1.153486425s] [1.153477025s] END
+I0906 19:31:15.464773       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos: (1.15711957s) 400 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:horizontal-pod-autoscaler 10.240.0.56:48590]
+I0906 19:31:15.466796       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.466906       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (435.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.511047       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.511171       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (479.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.599108       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.599221       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (409.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.847564       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.847813       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (732.309µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.895685       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.895813       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (470.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:15.899003       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:15.899376       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:15.899597       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.899770       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (3.664145ms) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:resourcequota-controller 10.240.0.56:48590]
+I0906 19:31:15.899945       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:15.900033       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (4.019249ms) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:resourcequota-controller 10.240.0.56:48590]
+I0906 19:31:15.983360       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:15.983512       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (597.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.071006       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:16.071107       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (424.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.159277       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:16.159353       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (381.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.247223       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:16.247409       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (575.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.334923       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:16.334992       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (365.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.424448       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:16.424633       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (606.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.649457       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:16.649561       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (564.507µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.735141       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:16.735289       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (562.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.822900       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:16.822968       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (411.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.870978       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:16.871068       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (408.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:16.919091       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:16.919158       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (436.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.007128       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.007232       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (454.306µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.055058       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:17.055310       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (537.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.115745       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.116167       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (822.61µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.331778       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:17.331923       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (639.707µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.419178       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.419334       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (476.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.507089       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:17.507241       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (506.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.595610       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.595853       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (738.109µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.683335       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:17.683452       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (532.507µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.771327       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.771628       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (730.709µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.819221       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:17.819741       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (876.511µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:17.907355       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:17.907485       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (620.907µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.157497       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:18.158049       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (979.012µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.203153       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:18.203282       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (531.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.291331       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:18.291425       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (479.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.343054       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:18.343495       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (761.009µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.391413       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:18.391842       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (772.61µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.479141       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:18.479239       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (446.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.527043       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:18.527116       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (404.705µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:18.616545       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:18.616650       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (827.11µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.062105       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.062352       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (684.408µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.107080       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.107393       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (659.208µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.195151       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.195260       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (485.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.283070       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.283286       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (612.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.331099       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.331330       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (610.108µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.379457       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.380713       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.881323ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.471666       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.471799       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (502.707µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.523022       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.523095       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (426.406µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.759293       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.759770       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (815.61µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.807140       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.807259       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (542.807µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.895210       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.895306       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (457.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.943105       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:20.943246       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (529.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:20.991031       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:20.991114       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (459.505µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:21.083656       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:21.083738       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (419.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:21.171182       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:21.171365       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (570.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:21.222992       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:21.223107       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (498.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:23.985914       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:23.986158       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (677.709µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.031059       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.031142       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (418.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.119213       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.119336       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (469.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.207103       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.207184       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (477.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.295119       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.295219       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (522.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.342978       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.343173       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (520.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.390957       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.391053       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (401.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.479136       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.479210       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (404.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.691600       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.691868       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (654.108µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.739312       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.739408       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (515.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.787312       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.787548       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (602.907µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.875019       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:24.875293       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (577.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:24.963531       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:24.963626       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (429.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.051156       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.051253       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (535.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.143188       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:25.143268       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (516.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.191292       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.191430       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (492.306µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.476115       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:25.476317       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (555.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.527224       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.527399       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (470.306µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.623107       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:25.623237       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (511.406µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.671184       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.671390       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (585.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.719066       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:25.719180       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (469.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.807232       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.807385       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (536.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.895211       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:25.895414       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (611.007µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:25.943201       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:25.943394       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (504.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.234320       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.234395       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (384.304µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.323245       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.323317       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (418.605µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.370968       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.371247       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (635.408µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.419073       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.419203       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (396.705µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.507248       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.507388       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (537.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.507253       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.507816       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (925.412µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.599776       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.599852       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (595.707µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.600293       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.600370       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.013913ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.687209       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.687291       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (507.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.687208       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.687436       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (649.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.775106       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.775338       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (525.607µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.775109       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.775645       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (857.911µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.867023       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:26.867098       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (407.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:26.955020       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:26.955090       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (440.505µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.043024       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.043096       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (393.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.091094       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.091271       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (472.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.091094       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.091391       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (601.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.178879       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.179149       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (581.507µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.267437       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.268063       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (960.012µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.358904       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.359137       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (611.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.362737       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.363000       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (569.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.370342       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.370419       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (331.604µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.399786       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.399939       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (433.905µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.443350       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.443350       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.443647       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (666.908µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.443958       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (944.611µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.531262       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.531526       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (535.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.531262       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.532077       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.133214ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.607237       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.607422       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (473.105µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.607922       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.608164       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (612.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.654948       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.655076       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (454.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.703223       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.703313       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (521.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.751188       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.751376       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (646.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.838794       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.839253       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (763.409µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.927056       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:27.927133       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (441.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:27.975155       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:27.975221       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (439.105µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:28.067203       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:28.067677       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (890.811µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:28.155174       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:28.155390       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (606.808µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:28.203009       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:28.203234       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (547.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:28.251759       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:28.251987       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (696.508µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:28.339094       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:28.339254       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (504.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:30.879782       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:30.879855       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (416.305µs) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/controller-discovery 10.240.0.56:48590]
+I0906 19:31:30.929609       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:30.929663       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (354.804µs) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/controller-discovery 10.240.0.56:48590]
+I0906 19:31:31.111009       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 3 milliseconds
+I0906 19:31:31.111330       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:31.111413       1 provider_external.go:24] Received request for namespace: default, metric name: cosmos, metric selectors: 
+I0906 19:31:31.111504       1 cosmosdb_client.go:46] {Messages 7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a cosmosdb azload2   Total8 2020-09-06T19:26:31Z/2020-09-06T19:31:31Z EntityName eq 'externalq' nijoyaciaksorc    azureload metrics 5f550a4d5a7bb01b4c0e285b available}
+I0906 19:31:32.311351       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:32.311638       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:32.311811       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (3.417142ms) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:generic-garbage-collector 10.240.0.56:48590]
+I0906 19:31:32.312147       1 round_trippers.go:438] POST https://10.0.0.1:443/apis/authorization.k8s.io/v1beta1/subjectaccessreviews 201 Created in 2 milliseconds
+I0906 19:31:32.312414       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:32.312484       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (3.173639ms) 200 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:generic-garbage-collector 10.240.0.56:48590]
+E0906 19:31:32.425535       1 provider_external.go:43] bad request: not found
+I0906 19:31:32.425696       1 trace.go:81] Trace[155581661]: "List /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos" (started: 2020-09-06 19:31:31.111380171 +0000 UTC m=+27.284946512) (total time: 1.314245088s):
+Trace[155581661]: [26.601µs] [26.601µs] About to List from storage
+Trace[155581661]: [1.314245088s] [1.314218487s] END
+I0906 19:31:32.426243       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1/namespaces/default/cosmos: (1.319021046s) 400 [hyperkube/v1.16.13 (linux/amd64) kubernetes/1da71a3/system:serviceaccount:kube-system:horizontal-pod-autoscaler 10.240.0.56:48590]
+I0906 19:31:33.013151       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.013440       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (656.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.060139       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.060226       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (396.704µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.146933       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.147094       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (440.905µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.195274       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.195394       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (506.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.283002       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.283186       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (399.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.371206       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.371421       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (595.808µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.459093       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.459210       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (490.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.510867       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.510936       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (405.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.726860       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.727065       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (513.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.760668       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.760780       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (440.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.807206       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.807351       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (447.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.807215       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.807837       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (889.911µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.885002       1 reflector.go:243] github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101: forcing resync
+I0906 19:31:33.885053       1 controller.go:149] adding item to queue for 'default/cosmos' with kind 'ExternalMetric'
+I0906 19:31:33.890258       1 handler.go:82] processing item 'cosmos' in namespace 'default'
+I0906 19:31:33.890538       1 handler.go:115] adding to cache item 'cosmos' in namespace 'default'
+I0906 19:31:33.890557       1 controller.go:134] succesfully proccessed item '{default/cosmos ExternalMetric}'
+I0906 19:31:33.890568       1 controller.go:91] processing next item
+I0906 19:31:33.890572       1 controller.go:98] processing item
+I0906 19:31:33.893862       1 reflector.go:243] github.com/Azure/azure-k8s-metrics-adapter/pkg/client/informers/externalversions/factory.go:101: forcing resync
+I0906 19:31:33.895114       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.895640       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:33.895812       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (596.307µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.896113       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.393217ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.983085       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.983330       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (501.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:33.983085       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:33.983621       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (842.11µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.071661       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.072560       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (1.299016ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.073307       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.073579       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (643.508µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.159135       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.159138       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.159490       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (668.008µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.159781       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (983.012µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.247118       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.247280       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (486.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.247136       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.247540       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (746.31µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.335172       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.335474       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (776.21µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.376576       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.376760       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (587.507µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.632903       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.633016       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (438.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.679024       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.679172       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (484.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.727034       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.727130       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (411.705µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.783361       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.783449       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (451.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.871208       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:34.871395       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (480.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:34.958877       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:34.958987       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (431.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.047191       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:35.047415       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (556.707µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.095294       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:35.095500       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (657.709µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.359172       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:35.359389       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (598.207µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.447179       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:35.447384       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (489.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.539546       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:35.539738       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (612.107µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.627209       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:35.627286       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (443.205µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.675200       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:35.675279       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (419.505µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.763125       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:35.763579       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (770.509µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.851131       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:35.851249       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (552.407µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:35.899011       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:35.899073       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (355.904µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.121062       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.121160       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (489.706µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.211166       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.211319       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (496.606µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.300636       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.300725       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (2.056425ms) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.386894       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.387089       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (538.807µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.475100       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.475607       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (922.211µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.563076       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.563209       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (469.505µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.611077       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.611486       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (712.908µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.694699       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.694856       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (460.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.695112       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.695157       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (355.805µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.695471       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.695532       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (415.005µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.696009       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.696066       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (562.007µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.696087       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.696177       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (458.706µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.696423       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.696454       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (317.404µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.696711       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.696768       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (424.005µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.697617       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.697715       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (914.111µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.697788       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.696772       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.697824       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (372.404µs) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.695494       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.697917       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (2.686632ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.697862       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (1.350317ms) 200 [Go-http-client/2.0 10.240.0.56:48532]
+I0906 19:31:36.910434       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:36.910519       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (564.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:36.954973       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:36.955090       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (500.506µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.043193       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:37.043404       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (622.408µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.091058       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:37.091368       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (658.508µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.139003       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:37.139076       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (399.805µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.227272       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:37.227350       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (448.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.274918       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:37.274991       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (394.804µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.323313       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:37.323374       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (362.305µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.654353       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:37.654554       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (516.206µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.743177       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:37.743279       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (447.405µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.831146       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:37.831217       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (504.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:37.919176       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:37.919253       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (422.806µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:38.007159       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:38.007277       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (536.207µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:38.054994       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:38.055067       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (478.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:38.143113       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:38.143185       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (392.705µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:38.231039       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:38.231115       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (413.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:38.804759       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:38.805377       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (1.047713ms) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:38.805826       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:38.805879       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (405.505µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:39.225414       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:39.225482       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1?timeout=32s: (436.005µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:39.226416       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:39.226551       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1?timeout=32s: (484.006µs) 200 [kubectl/v1.19.0 (darwin/amd64) kubernetes/e199641 10.240.0.56:48590]
+I0906 19:31:39.664204       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:39.664463       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (753.71µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:39.739079       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:39.739159       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (489.106µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:39.826875       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:39.826964       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (391.904µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:39.915099       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:39.915194       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (511.906µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:39.963014       1 handler.go:143] custom-metrics-adapter: GET "/apis/custom.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/custom.metrics.k8s.io/v1beta1
+I0906 19:31:39.963104       1 wrap.go:47] GET /apis/custom.metrics.k8s.io/v1beta1: (499.006µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]
+I0906 19:31:40.011095       1 handler.go:143] custom-metrics-adapter: GET "/apis/external.metrics.k8s.io/v1beta1" satisfied by gorestful with webservice /apis/external.metrics.k8s.io/v1beta1
+I0906 19:31:40.011176       1 wrap.go:47] GET /apis/external.metrics.k8s.io/v1beta1: (426.005µs) 200 [kubectl/v1.9.2 (linux/amd64) kubernetes/5fa2db2 10.240.0.56:48590]

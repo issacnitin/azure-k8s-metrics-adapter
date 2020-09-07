@@ -1,0 +1,18 @@
+apiVersion: azure.com/v1alpha2
+kind: ExternalMetric
+metadata:
+  name: cosmos
+spec:
+  type: cosmosdb
+  azure:
+    resourceGroup: nijoyaciaksorc
+    resourceName: azload2
+    subscription: 7c71b563-0dc0-4bc0-bcf6-06f8f0516c7a
+    database: azureload
+    collection: metrics
+    documentid: 5f550a4d5a7bb01b4c0e285b
+    documentfield: available
+  metric:
+    metricName: Messages
+    aggregation: Total8
+    filter: EntityName eq 'externalq'

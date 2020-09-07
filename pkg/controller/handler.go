@@ -7,10 +7,10 @@ import (
 	"github.com/Azure/azure-k8s-metrics-adapter/pkg/azure/externalmetrics"
 	listers "github.com/Azure/azure-k8s-metrics-adapter/pkg/client/listers/metrics/v1alpha2"
 	"github.com/Azure/azure-k8s-metrics-adapter/pkg/metriccache"
-	"k8s.io/klog"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/client-go/tools/cache"
+	"k8s.io/klog"
 )
 
 // Handler processes the events from the controler for external metrics
@@ -106,6 +106,10 @@ func (h *Handler) handleExternalMetric(ns, name string, queueItem namespacedQueu
 		Type:                      externalMetricInfo.Spec.Type,
 		Namespace:                 externalMetricInfo.Spec.AzureConfig.ServiceBusNamespace,
 		Subscription:              externalMetricInfo.Spec.AzureConfig.ServiceBusSubscription,
+		DatabaseName:              externalMetricInfo.Spec.AzureConfig.DatabaseName,
+		CollectionName:            externalMetricInfo.Spec.AzureConfig.CollectionName,
+		DocumentId:                externalMetricInfo.Spec.AzureConfig.DocumentId,
+		DocumentField:             externalMetricInfo.Spec.AzureConfig.DocumentField,
 	}
 
 	klog.V(2).Infof("adding to cache item '%s' in namespace '%s'", name, ns)

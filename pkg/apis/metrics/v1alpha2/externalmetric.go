@@ -37,6 +37,7 @@ type ExternalMetricConfig struct {
 	Filter      string `json:"filter,omitempty"`
 }
 
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // AzureConfig holds Azure configuration for an External Metric
 type AzureConfig struct {
 	// Shared

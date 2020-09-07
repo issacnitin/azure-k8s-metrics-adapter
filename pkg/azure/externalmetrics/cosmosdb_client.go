@@ -5,9 +5,13 @@ import (
 	"strconv"
 
 	"github.com/Azure/azure-sdk-for-go/services/cosmos-db/mgmt/2015-04-08/documentdb"
-	"github.com/Azure/azure-sdk-for-go/services/cosmos-db/mongodb"
+
 	"github.com/Azure/go-autorest/autorest/azure/auth"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+	"k8s.io/klog"
 )
 
 type cosmosClient struct {
@@ -42,31 +46,45 @@ func (c *cosmosClient) GetAzureMetric(azMetricRequest AzureExternalMetricRequest
 		return AzureExternalMetricResponse{}, err
 	}
 
+	klog.V(0).Infof("%s", azMetricRequest)
+
 	connectionStrings, err := c.client.ListConnectionStrings(context.Background(), azMetricRequest.ResourceGroup, azMetricRequest.ResourceName)
 	if err != nil || len(*connectionStrings.ConnectionStrings) == 0 {
 		return AzureExternalMetricResponse{}, err
 	}
-	mongoClient, err := mongodb.NewMongoDBClientWithConnectionString((*(*connectionStrings.ConnectionStrings)[0].ConnectionString))
+
+	clientOptions := options.Client().ApplyURI(*(*connectionStrings.ConnectionStrings)[0].ConnectionString).SetDirect(true)
+	cl, err := mongo.NewClient(clientOptions)
+	if err != nil {
+		return AzureExternalMetricResponse{}, err
+	}
+	err = cl.Connect(context.Background())
+
 	if err != nil {
 		return AzureExternalMetricResponse{}, err
 	}
 
-	con := mongoClient.DB(azMetricRequest.DatabaseName).C(azMetricRequest.CollectionName)
-	var dict map[string]string
-	err = con.Find(bson.M{"_id": azMetricRequest.DocumentId}).One(&dict)
+	var dict Doc
+	col := cl.Database(azMetricRequest.DatabaseName).Collection(azMetricRequest.CollectionName)
+	objID, err := primitive.ObjectIDFromHex(azMetricRequest.DocumentId)
+	if err != nil {
+		return AzureExternalMetricResponse{}, err
+	}
+	err = col.FindOne(context.Background(), bson.M{"_id": objID}).Decode(&dict)
 	if err != nil {
 		return AzureExternalMetricResponse{}, err
 	}
 
-	if val, ok := dict[azMetricRequest.DocumentField]; ok {
-		v, err := strconv.Atoi(val)
-		if err != nil {
-			return AzureExternalMetricResponse{}, err
-		}
-		return AzureExternalMetricResponse{
-			Value: float64(v),
-		}, err
+	v, err := strconv.Atoi(dict.Available)
+	if err != nil {
+		return AzureExternalMetricResponse{}, err
 	}
+	return AzureExternalMetricResponse{
+		Value: float64(v),
+	}, err
+}
 
-	return AzureExternalMetricResponse{}, err
+type Doc struct {
+	Available string      `json:"available"`
+	Id        interface{} `json:"id" bson:"_id,omitempty"`
 }

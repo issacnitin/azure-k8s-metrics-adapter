@@ -57,7 +57,7 @@ func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID stri
 		}
 
 		value := request.Values().List()[0]
-
+		klog.V(0).Infof("Checking key %s with value %s", request.Key(), value)
 		switch request.Key() {
 		// Shared
 		case "metricName":
@@ -100,17 +100,18 @@ func ParseAzureMetric(metricSelector labels.Selector, defaultSubscriptionID stri
 		case "subscription":
 			klog.V(4).Infof("AzureMetric subscription: %s", value)
 			merticReq.Subscription = value
+		// Cosmos DB
 		case "database":
-			klog.V(4).Infof("AzureMetric database: %s", value)
+			klog.V(2).Infof("AzureMetric database: %s", value)
 			merticReq.DatabaseName = value
 		case "collection":
-			klog.V(4).Infof("AzureMetric collection: %s", value)
+			klog.V(2).Infof("AzureMetric collection: %s", value)
 			merticReq.CollectionName = value
 		case "documentid":
-			klog.V(4).Infof("AzureMetric documentid: %s", value)
+			klog.V(2).Infof("AzureMetric documentid: %s", value)
 			merticReq.DocumentId = value
 		case "documentfield":
-			klog.V(4).Infof("AzureMetric documentfield: %s", value)
+			klog.V(2).Infof("AzureMetric documentfield: %s", value)
 			merticReq.DocumentField = value
 		default:
 			return AzureExternalMetricRequest{}, fmt.Errorf("selector label '%s' not supported", request.Key())
